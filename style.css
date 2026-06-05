@@ -829,3 +829,180 @@ body {
         width: 100%;
     }
 }
+
+/* --- Print PDF Styling (1-Page CV) --- */
+#print-cv-container {
+    display: none;
+}
+
+@media print {
+    /* Hide EVERYTHING from the screen layout */
+    body > *:not(#print-cv-container) {
+        display: none !important;
+    }
+    
+    /* Reset page settings for A4 */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        background: white;
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-family: 'Inter', sans-serif;
+        font-size: 10pt;
+        color: #333;
+    }
+    
+    /* Show the print container */
+    #print-cv-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Header */
+    .print-cv-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #050508;
+        color: white;
+        padding: 30px 40px;
+        height: 180px;
+    }
+    
+    .print-header-text h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28pt;
+        margin: 0 0 5px 0;
+        color: #00f0ff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .print-header-text h2 {
+        font-size: 14pt;
+        font-weight: 400;
+        margin: 0 0 15px 0;
+        color: #fff;
+    }
+    
+    .print-hook {
+        font-size: 9.5pt;
+        line-height: 1.4;
+        max-width: 550px;
+        color: #ccc;
+    }
+    
+    .print-header-img img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 3px solid #00f0ff;
+        object-fit: cover;
+    }
+    
+    /* Body */
+    .print-cv-body {
+        display: flex;
+        flex: 1;
+        height: calc(297mm - 180px);
+    }
+    
+    /* Left Column */
+    .print-col-left {
+        width: 32%;
+        background: #f4f6f8;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        border-right: 1px solid #ddd;
+    }
+    
+    /* Right Column */
+    .print-col-right {
+        width: 68%;
+        padding: 25px 30px;
+        box-sizing: border-box;
+    }
+    
+    .print-section {
+        margin-bottom: 25px;
+    }
+    
+    .print-section h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 13pt;
+        color: #050508;
+        text-transform: uppercase;
+        border-bottom: 2px solid #00f0ff;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    
+    .print-col-left p {
+        margin-bottom: 8px;
+        line-height: 1.4;
+        font-size: 9.5pt;
+    }
+    
+    .print-col-left h4 {
+        margin: 12px 0 4px 0;
+        font-size: 10pt;
+        color: #444;
+    }
+    
+    .print-item {
+        margin-bottom: 18px;
+    }
+    
+    .print-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2px;
+    }
+    
+    .print-item-header strong {
+        font-size: 11.5pt;
+        color: #050508;
+    }
+    
+    .print-item-header span {
+        font-size: 9pt;
+        color: #666;
+        font-weight: bold;
+    }
+    
+    .print-item-sub {
+        font-size: 10pt;
+        color: #0066ff;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+    
+    .print-list {
+        margin: 0;
+        padding-left: 15px;
+    }
+    
+    .print-list li {
+        margin-bottom: 4px;
+        font-size: 9.5pt;
+        line-height: 1.4;
+    }
+    
+    .print-item p {
+        margin: 4px 0 0 0;
+        font-size: 9.5pt;
+        color: #444;
+    }
+}

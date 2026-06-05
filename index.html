@@ -53,7 +53,8 @@
                     </div>
                     
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">Voir mes projets <i class="fa-solid fa-arrow-right"></i></a>
+                        <button onclick="window.print()" class="btn btn-primary"><i class="fa-solid fa-file-pdf"></i> Télécharger CV</button>
+                        <a href="#projects" class="btn btn-secondary">Voir mes projets</a>
                         <a href="#contact" class="btn btn-secondary">Me contacter</a>
                     </div>
                     
@@ -299,6 +300,114 @@
     <footer class="footer">
         <p>&copy; 2026 Mohamed Bakhalek. Conçu avec passion.</p>
     </footer>
+
+    <!-- Print CV Container (Hidden on screen, visible on print) -->
+    <div id="print-cv-container">
+        <div class="print-cv-header">
+            <div class="print-header-text">
+                <h1>MOHAMED BAKHALEK</h1>
+                <h2>Ingénieur Logiciel & Data</h2>
+                <p class="print-hook">Étudiant ingénieur en développement logiciel et applicatif, diplômé en Big Data et Full Stack. Motivé par la conception de solutions logicielles performantes et innovantes.</p>
+            </div>
+            <div class="print-header-img">
+                <img src="image.jpg" alt="Mohamed">
+            </div>
+        </div>
+        
+        <div class="print-cv-body">
+            <div class="print-col-left">
+                <div class="print-section">
+                    <h3>Contact</h3>
+                    <p>📍 Agadir, Maroc</p>
+                    <p>📞 +212 772 846 560</p>
+                    <p>📧 mohamedbakhalek01@gmail.com</p>
+                    <p>🔗 linkedin.com/in/mohamed-bakhalek-0369992a1</p>
+                    <p>💻 github.com/simo9876</p>
+                </div>
+                
+
+                <div class="print-section">
+                    <h3>Langues</h3>
+                    <p><strong>Arabe</strong> : Maternelle</p>
+                    <p><strong>Français</strong> : Courant</p>
+                    <p><strong>Anglais</strong> : Technique</p>
+                </div>
+                
+                <div class="print-section">
+                    <h3>Qualités</h3>
+                    <p>Autonomie, Esprit d'analyse, Travail en équipe, Respect des délais</p>
+                </div>
+            </div>
+            
+            <div class="print-col-right">
+                <div class="print-section">
+                    <h3>Compétences Techniques</h3>
+                    <div class="print-item">
+                        <p><strong>Programmation & Web :</strong> HTML5, CSS3, JavaScript, PHP, Python, Java, React.js, Node.js, Laravel, Tailwind CSS, Express.js</p>
+                        <p><strong>Bases de données & Big Data :</strong> SQL, MySQL, MongoDB, Cassandra, HBase, Neo4j, HDFS, MapReduce, Apache Pig, Apache Kafka, Apache Spark</p>
+                        <p><strong>Systèmes, IA & Divers :</strong> Machine Learning, Data Mining, Admin Réseaux IPv4, Virtualisation, Cloud Computing, Comptabilité Générale, Diagnostic Financier</p>
+                    </div>
+                </div>
+
+                <div class="print-section">
+                    <h3>Expérience Professionnelle</h3>
+                    <div class="print-item">
+                        <div class="print-item-header">
+                            <strong>Développeur Web Stagiaire</strong>
+                            <span>2024 (1 mois)</span>
+                        </div>
+                        <div class="print-item-sub">Ultimate Solutions Morocco</div>
+                        <ul class="print-list">
+                            <li>Développement d'applications web (Front-End et Back-End).</li>
+                            <li>Conception et gestion de bases de données.</li>
+                            <li>Participation aux phases de test et de maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="print-section">
+                    <h3>Formation</h3>
+                    <div class="print-item">
+                        <div class="print-item-header">
+                            <strong>Cycle d'Ingénieur – Dev Logiciel</strong>
+                            <span>2025 – Présent</span>
+                        </div>
+                        <div class="print-item-sub">ENSA Agadir</div>
+                    </div>
+                    <div class="print-item">
+                        <div class="print-item-header">
+                            <strong>Licence en Big Data</strong>
+                            <span>2024 – 2025</span>
+                        </div>
+                        <div class="print-item-sub">EST Fkih Ben Salah</div>
+                    </div>
+                    <div class="print-item">
+                        <div class="print-item-header">
+                            <strong>Technicien Spécialisé Full Stack</strong>
+                            <span>2022 – 2024</span>
+                        </div>
+                        <div class="print-item-sub">ISTA Agadir</div>
+                    </div>
+                </div>
+                
+                <div class="print-section">
+                    <h3>Projets Réalisés</h3>
+                    <div class="print-item">
+                        <strong>Foularino (foularino.ma)</strong>
+                        <p>Site web professionnel avec gestion de contenu dynamique.</p>
+                    </div>
+                    <div class="print-item">
+                        <strong>Aga Tours (aga-tours.com)</strong>
+                        <p>Plateforme de tourisme présentant des services avec une interface responsive.</p>
+                    </div>
+                    <div class="print-item">
+                        <strong>All Events (allevents.page.gd)</strong>
+                        <p>Plateforme complète de gestion et de présentation d'événements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <!-- GSAP for animations -->
