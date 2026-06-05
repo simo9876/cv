@@ -166,4 +166,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // --- 4. Mobile Menu Toggle ---
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinksContainer = document.querySelector('.nav-links');
+    
+    mobileMenu.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
+        const icon = mobileMenu.querySelector('i');
+        if (navLinksContainer.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+            icon.classList.replace('fa-xmark', 'fa-bars');
+        }
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksContainer.classList.remove('active');
+            const icon = mobileMenu.querySelector('i');
+            if(icon.classList.contains('fa-xmark')) {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+    });
+    
 });
